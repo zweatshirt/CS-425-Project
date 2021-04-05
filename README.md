@@ -1,1 +1,2 @@
-# CS425DB
+# CS425 Project
+For now just commit and push any changes you make (as a full SQL script of the DB) until we find a better way to integrate the DB into Git's workflow.
