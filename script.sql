@@ -3,7 +3,9 @@ create table "Employer"
     employer_id                    integer not null,
     company_sale                   integer not null,
     insurance_premium_contribution integer not null,
-    "401k_company_match"           integer not null,
+    "401k_company_match"           integer not null
+        constraint "401k_match"
+            check ((("401k_company_match")::numeric > 0.00) AND (("401k_company_match")::numeric < 0.07)),
     insurance_name                 varchar not null
 );
 
@@ -76,9 +78,12 @@ create unique index insurance_insurance_name_uindex
 
 create table "401k_Plan"
 (
-    plan_name integer not null
+    plan_name    integer              not null
         constraint "401k_plan_pk"
-            primary key
+            primary key,
+    plan_percent numeric default 0.00 not null
+        constraint correct_percent
+            check ((plan_percent > 0.00) AND (plan_percent < 100.00))
 );
 
 alter table "401k_Plan"
