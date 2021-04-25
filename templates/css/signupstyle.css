@@ -7,18 +7,18 @@ body {
     color: #FFFFFF
 }
 
-.signin {
+.signup {
   width: 420px;
   margin: 16px auto;
 }
 
-.signin-header,
+.signup-header,
 .signin p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.signin-header {
+.signup-header {
   padding: 18px;
   background: #227581;
   font-size: 1.2em;
@@ -27,12 +27,12 @@ body {
   text-transform: uppercase;
 }
 
-.signin-container, .signin p {
+.signup-container, .signin p {
   background: #f7f7f7;
   padding: 14px;
 }
 
-.signin input {
+.signup input {
   font-size: 1em;
   display: block;
   box-sizing: border-box;
@@ -42,21 +42,21 @@ body {
   border-style: solid;
 }
 
-.signin input[type="text"],
-.signin input[type="password"] {
+.signup input[type="text"],
+.signup input[type="password"] {
   border-color: #ccc;
   color: #ccc;
 }
 
-.signin input[type="submit"] {
+.signup input[type="submit"] {
   background: #227581;
   color: #ffffff
 }
-.login input[type="submit"]:hover {
-  background: #dddddd;
+.signup input[type="submit"]:hover {
+  background: #17c;
 }
 
-.signin input[type="text"]:focus,
-.signin input[type="password"]:focus {
+.signup input[type="email"]:focus,
+.signup input[type="password"]:focus {
   border-color: #dddddd;
 }
