@@ -13,20 +13,23 @@
     <div class="signup">
         <h1 class="signup-header">Sign-up</h1>
 
-        <form class="signup-container">
-            <p id="ssn"><input type="text"
+        <form class="signup-container" method="POST" action="/signup">
+            <p id="ssn"><input type="text" name="ssn"
                 placeholder="Social Security Number">
             </p>
             <p id=""
-            <p id="first-name"><input type="text"
+            <p id="first-name"><input type="text" name="first"
                 placeholder="First Name">
             </p>
-            <p id="last-name"><input type="text"
+            <p id="last-name"><input type="text" name="last"
                 placeholder="Last Name">
             </p>
 
-            <p id="password"><input type="password"
-                placeholder="New Password"
+            <p id="password"><input type="password" name="password"
+                placeholder="New Password">
+            </p>
+            <p id="password"><input type="password" name="passwordConfirm"
+                placeholder="Confirm Password">
             </p>
 
             <p id="submit"><input type="submit" value="Enter"></p>

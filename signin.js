@@ -15,7 +15,7 @@ const ssn = document.querySelector('#ssn');
 const password = document.querySelector('#password');
 const signin = document.querySelector('#signin-container');
 
-signin.addEventListener('submit', (e) -> {
+signin.addEventListener('submit', (e) => {
     e.preventDefault();
 
 });
