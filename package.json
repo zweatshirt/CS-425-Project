@@ -1,0 +1,23 @@
+{
+  "name": "CS-425-Project",
+  "version": "1.0.0",
+  "description": "This is a project done for the class CS 425 in IIT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zweatshirt/CS-425-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zweatshirt/CS-425-Project/issues"
+  },
+  "homepage": "https://github.com/zweatshirt/CS-425-Project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
