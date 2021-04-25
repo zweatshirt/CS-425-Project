@@ -3,6 +3,10 @@ For now just commit and push any changes you make (as a full SQL script of the D
 
 Todo:
 - Java implementation to do "Administrator requests"
+- We need to think about the UI. Do we want to do a basic web page?
+- User privileges: admin, manager, employee, maybe dependent
+- Sign in, sign up
+- Update information
 
 Fixed:
 - Confused on how 401k works, we need to find a way to link together employer contribution and employee contribution. 401k table is useless right now. 401k stuff is the biggest focus right now.
