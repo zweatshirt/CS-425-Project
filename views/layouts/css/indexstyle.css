@@ -20,3 +20,105 @@
     background-color: #ddd;
     color: black;
   }
+
+  @import
+url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+   background: #227581; 
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF
+}
+
+.container{
+    border: 1px solid white;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto; 
+
+}
+
+.clear{
+  clear: both;
+}
+
+#about{
+  background: linear-gradient(#446469, #4a5e61); 
+  background: -webkit-linear-gradient(#446469, #4a5e61);
+  background: -moz-linear-gradient(#446469, #4a5e61);
+  background: -o-linear-gradient(#446469, #4a5e61);
+  margin: 20px 0px;
+  padding: 30px; 
+}
+
+#about h3{
+  font-size: 45px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+#about p{
+  font-size: 22;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal; 
+  text-align: justify;
+}
+
+.footer{
+  height: 60px;
+  background: linear-gradient(#446469, #4a5e61); 
+  background: -webkit-linear-gradient(#446469, #4a5e61);
+  background: -moz-linear-gradient(#446469, #4a5e61);
+  background: -o-linear-gradient(#446469, #4a5e61);
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: white;
+}
+
+.sidebar {
+  height: auto;
+  width: 400px;
+  border: 1px solid #dcc;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+.sidebar h3{
+  color: #dcc;
+  font-size: 30px;
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  font-size: 20px;
+  color: whitesmoke;
+  transition: font-size 0.3s ease;
+  -webkit-transition: font-size 0.3s ease;
+  -moz-transition: font-size 0.3s ease;
+  -o-transition: font-size 0.3s ease;
+  -ms-transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active{
+  text-decoration: none;
+  color: #4a5e61;
+  font: 23px;
+  font-weight: bold;
+}
+
+#centralSideBar{
+  float: initial;
+}
+
+#centralSideBar ul li{
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-top: 4px;
+
+}
+
+.sidebar ul{
+  padding-top: 3px;
+}
