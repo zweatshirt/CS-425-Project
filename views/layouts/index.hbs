@@ -1,0 +1,32 @@
+<html lang="en">
+
+<header>
+    <!-- <meta> tags> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <div class="topnav">
+        <a href="#about">About</a>
+        {{#if topnav.logged_in}}
+        <a href="#signout">Signout</a>
+
+        {{else}}
+        <a href="#home">Home</a>
+        <a href="#signin">Login</a>
+        <a href="signup">Sign up</a>
+
+
+        {{/if}}
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        {{{body}}}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
