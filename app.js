@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const path = require('path')
 const express = require("express")
 var app = express()
+var logged_in = false;
 
 // support url encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,14 +27,23 @@ app.set('views', path.join(__dirname, '/views/layouts'));
 app.get('/', function (req, res) {
     res.render('home',{
         topnav: {
-            logged_in: false
+            logged_in: logged_in
         }
     });
 });
 
 // called on user sign up form submit
 app.get('/signup', (req, res) => {
-    res.render('signup',{topnav: { logged_in: false }});
+    res.render('signup',{topnav: { logged_in: logged_in }});
+});
+
+//tried to get the about page working, didn't happen
+app.get('/about', function (req, res) {
+    res.render('about', {
+        topnav: {
+            logged_in: logged_in
+        }
+    });
 });
 
 // for hashing passwords

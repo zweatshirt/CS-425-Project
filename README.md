@@ -7,6 +7,7 @@ Todo:
 - User privileges: admin, manager, employee, maybe dependent
 - Sign in, sign up
 - Update information
+- Fix the backend of About page. Cannot connect to about page via index page like signup page yet.
 
 Fixed:
 - Confused on how 401k works, we need to find a way to link together employer contribution and employee contribution. 401k table is useless right now. 401k stuff is the biggest focus right now.
