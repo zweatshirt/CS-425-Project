@@ -1,14 +1,14 @@
 const { Client } = require('pg');
-
+//make sure to change the credentials needed to sign into your db
 const client = new Client({
     user: 'postgres',
     host: 'localhost',
-    database: 'testdb',
+    database: 'postgres',
     password: '1234abcd',
     port: 5432,
 });
 
-client.connect();
+await client.connect();
 
 
 const ssn = document.querySelector('#ssn');
