@@ -1,9 +1,9 @@
-const express = require('express');
+
 const exphbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
-
+const path = require('path')
 const express = require("express")
 var app = express()
 
@@ -13,24 +13,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // probably not necessary
 app.use(cookieParser());
 
-// engine needed for authentication
+// engine needed for template engine    `
 app.engine('hbs', exphbs({
-    extname: '.hbs'
+    extname: '.hbs',
+    layoutsDir:'views/layouts',
+    defaultLayout:'index'
 }));
 
 app.set('view engine', 'hbs');
-
-app.get("/",function(request,response){
-response.send("Hello World!")
-})
+app.set('views', path.join(__dirname, '/views/layouts'));
 
 app.get('/', function (req, res) {
-    res.render('index');
+    res.render('home',{
+        topnav: {
+            logged_in: false
+        }
+    });
 });
 
 // called on user sign up form submit
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup',{topnav: { logged_in: false }});
 });
 
 // for hashing passwords
