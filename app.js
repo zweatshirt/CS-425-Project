@@ -7,7 +7,7 @@ const path = require('path')
 const express = require("express")
 var app = express()
 var logged_in = false;
-
+var client=require("./signin")
 // support url encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -31,7 +31,9 @@ app.get('/', function (req, res) {
         }
     });
 });
-
+app.get('/time',function(req,res){
+    client.query()
+})
 // called on user sign up form submit
 app.get('/signup', (req, res) => {
     res.render('signup',{topnav: { logged_in: logged_in }});
