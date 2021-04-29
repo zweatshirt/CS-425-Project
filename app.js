@@ -31,9 +31,7 @@ app.get('/', function (req, res) {
         }
     });
 });
-app.get('/time',function(req,res){
-    client.query()
-})
+
 // called on user sign up form submit
 app.get('/signup', (req, res) => {
     res.render('signup',{topnav: { logged_in: logged_in }});

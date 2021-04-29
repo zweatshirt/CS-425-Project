@@ -24,4 +24,5 @@ signin.addEventListener('submit', (e) => {
     e.preventDefault();
 
 });*/
+result()
 module.exports.query = result;

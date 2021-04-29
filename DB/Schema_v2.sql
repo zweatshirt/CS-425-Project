@@ -133,10 +133,7 @@ create table "Employer"
     "401k_company_match"           integer not null
         constraint "401k_match"
             check ((("401k_company_match")::numeric > 0.00) AND (("401k_company_match")::numeric < 0.07)),
-    benefits_id                    integer
-        constraint employer_benefits_benefits_id_fk
-            references "Benefits" (benefits_id)
-            on update cascade
+    
 );
 
 alter table "Employer"
@@ -145,8 +142,7 @@ alter table "Employer"
 create unique index employer_employer_id_uindex
     on "Employer" (employer_id);
 
-create unique index employer_benefits_id_uindex
-    on "Employer" (benefits_id);
+
 
 
 create table "Employer_State"
