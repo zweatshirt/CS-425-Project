@@ -14,3 +14,6 @@ Fixed:
 
 - For tax bracket, we have roughly the same issue. How can we use the employee’s tax bracket to match with the brackets in Federal? My guess is we should implement the actual percentage programmatically ie query to check that “Employee”.federal_tax_brack equals one of the brackets in Federal, then compute tax payment from salary based on the bracket. OR we can make separate tables for each bracket, and make Employee’s federal_tax_bracket a foreign key.
 
+The application is going to be used by the system admin. So the assumptions are the signup and signin are going to be used by system admins in various employers. After Signin, there is supposed to be these options
+1) employee -> lookup by employee id or by name -> update the employee id -> delete employee -> create biweekly paycheck -> create w2 -> create employee expense report 
+2) employer -> update employer information
