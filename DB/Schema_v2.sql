@@ -99,7 +99,7 @@ create table "Employee"
         constraint employee_pk
             primary key,
     name                varchar,
-    federal_tax_bracket integer              not null,
+    base_salary         integer              not null
     job_title           varchar              not null,
     salary_type         varchar              not null,
     performance         varchar              not null,
@@ -166,9 +166,6 @@ create unique index employer_state_employer_id_uindex
 
 create table "Federal"
 (
-    ssn             varchar(11) not null
-        constraint ssn
-            references "Employee",
     year            integer     not null,
     tax_bracket_1   numeric     not null,
     tax_bracket_2   numeric,
@@ -176,14 +173,13 @@ create table "Federal"
     social_security numeric     not null,
     medicare        numeric     not null,
     constraint "Federal_pkey"
-        primary key (ssn, year)
+        primary key (year)
 );
 
 alter table "Federal"
     owner to postgres;
 
-create unique index federal_ssn_uindex
-    on "Federal" (ssn);
+
 
 create unique index federal_year_uindex
     on "Federal" (year);
