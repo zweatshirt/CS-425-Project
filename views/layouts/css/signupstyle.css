@@ -42,7 +42,7 @@ body {
   border-style: solid;
 }
 
-.signup input[type="text"],
+.signup input[type="email"],
 .signup input[type="password"] {
   border-color: #ccc;
   color: #ccc;

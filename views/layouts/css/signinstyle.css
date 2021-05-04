@@ -42,7 +42,7 @@ body {
   border-style: solid;
 }
 
-.signin input[type="text"],
+.signin input[type="email"],
 .signin input[type="password"] {
   border-color: #ccc;
   color: #ccc;
@@ -56,7 +56,7 @@ body {
   background: #dddddd;
 }
 
-.signin input[type="text"]:focus,
+.signin input[type="email"]:focus,
 .signin input[type="password"]:focus {
   border-color: #dddddd;
 }
