@@ -35,9 +35,28 @@ app.get('/', function (req, res) {
 app.get('/adminsignin',(req,res) => {
     res.render('adminsignin',{topnav: { logged_in: logged_in }})
 })
+
+app.get('/signin', (req, res) => {
+    res.render('signin'),{topnav: { logged_in: logged_in }}
+    
+})
 // called on user sign up form submit
-app.get('/signup', (req, res) => {
-    res.render('signup',{topnav: { logged_in: logged_in }});
+app.post('/signinchecked', (req, res) => {
+    const { email, password } = req.body;
+    console.log(email)
+    client.query('SELECT 1 FROM employee_user where user_email=$1::text and password=$2::text',[email,password],(err,res2)=>{
+        console.log(err,res);
+        if (res2.rowCount === 2) {
+            res.render('employeepage', {
+                topnav: { logged_in: true }
+            }
+        }
+    });
+    res.render('employeepage',{
+        topnav: {
+            logged_in: logged_in
+        }
+    });
 });
 
 //tried to get the about page working, didn't happen
@@ -53,7 +72,7 @@ app.post('/admincheck',(req,res)=>{
     console.log(email)
     client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[email,password],(err,res)=>{
         console.log(err,res);
-        
+
     });
 
 });
