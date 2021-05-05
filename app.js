@@ -75,10 +75,11 @@ app.post('/admincheck',(req,res)=>{
             res.render('adminpage', {
                 topnav: { logged_in: true }
             });
-        }
-        res.render('adminsignin', {
+        }else{
+            res.render('adminsignin', {
             topnav: { logged_in: false }
         });
+    }
 
     });
 
@@ -89,8 +90,15 @@ const getHashedPassword = (password) => {
     const hash = sha256.update(password).digest('base64');
     return hash;
 }
+app.get('/signout',(req,res) => {
+    res.render('home',{
+        topnav: { logged_in: false }
+    });
+})
 app.get('/signup',(req,res) => {
-    res.render('signup',)
+    res.render('signup',{
+        topnav: { logged_in: false }
+    });
 })
 // change to click from admin portal button
 app.get('/signupchecked', (req, res) => {
