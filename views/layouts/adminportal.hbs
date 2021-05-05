@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="adminportal.js"></script>
+    <script type="text/javascript" src="adminpage.js"></script>
+    <link rel="stylesheet" href="css/adminportal.css">
 </head>
 
 <header>
-    <link rel="stylesheet" href="css/adminportal.css">
-
 </header>
 <body>
     <div id="adminoptions" class="selection">
@@ -23,7 +22,7 @@
     </div>
 
     <div hidden id="addemployer-1" class="container">
-        <form class="form-container">
+        <form class="form-container" onsubmit="addEmployerSubmit()">
             <p><input type="text" name="employerid"
                 placeholder="Employer ID">
             </p>
@@ -44,7 +43,7 @@
     </div>
 
     <div hidden id="updateemployer-1" class="container">
-        <form class="form-container">
+        <form class="form-container" onsubmit="updateEmployerSubmit()">
             <p><input type="text" name="employerid"
                 placeholder="Employer ID">
             </p>
@@ -66,7 +65,7 @@
     </div>
 
     <div hidden id="createw2-1" class="container">
-        <form class="form-container">
+        <form class="form-container" onsubmit="createW2Submit()">
             <p><input type="text" name="w2firstname"
                 placeholder="Employee First Name">
             </p>
@@ -87,7 +86,7 @@
     </div>
 
     <div hidden id="expensereport-1" class="container">
-        <form class="form-container">
+        <form class="form-container" onsubmit="expenseReportSubmit()">
             <p><input type="text" name="reportempfirstname"
                 placeholder="Employee First Name">
             </p>
@@ -158,7 +157,7 @@
         </form>
     </div>
 
-    <div hidden id="updateinfo" class="container">
+    <div hidden id="updateemployee-1" class="container">
         <form class="form-container">
             <p><input type="text" name="updateempfirstname"
                 placeholder="Employee First Name">
@@ -177,7 +176,7 @@
                 placeholder="Update Employee Performance">
             </p>
             <p><input type="text" name="updateaddress"
-                placeholder="Update Employee Address"
+                placeholder="Update Employee Address">
             </p>
             <p><input type="text" name="401k"
                 placeholder="Update 401k Contribution">
