@@ -1,8 +1,13 @@
 # CS425 Project
-For now just commit and push any changes you make (as a full SQL script of the DB) until we find a better way to integrate the DB into Git's workflow.
+Authors: Jayaram Chandar (github: theultimate1), Zachery Linscott (github: zweatshirt), Rishabh Tyagi (github: rrtyagii)
+Technologies used:
+- Node.js for handling backend: server requests, querying, and authentication
+- Handlebars
+- JS, CSS
+- Database built using PostgreSQL through DataGrip
+- 
 
 Todo:
-- Java implementation to do "Administrator requests"
 - We need to think about the UI. Do we want to do a basic web page?
 - User privileges: admin, manager, employee, maybe dependent
 - Sign in, sign up
