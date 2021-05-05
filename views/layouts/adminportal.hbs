@@ -21,6 +21,17 @@
         </div>
     </div>
 
+    <div hidden id="expensereport" class="expensereport">
+        <form class="report-container">
+            <p><input type="text" name="reportname"
+                placeholder="Employee E-mail">
+            </p>
+
+
+            <p id="submit"><input type="submit" name="addsubmit" value="Enter"></p>
+        </form>
+    </div>
+
     <div hidden id="addemployee" class="addemployee">
         <form class="add-container">
             <p><input type="text" name="addemail"
@@ -32,11 +43,11 @@
             <p><input type="text" name="addssn"
                 placeholder="Employee SSN">
             </p>
-            <p><input type="text" name="addempname"
-                placeholder="Employee Name">
+            <p><input type="text" name="addempfirstname"
+                placeholder="Employee First Name">
             </p>
-            <p><input type="text" name="addempsalarytype"
-                placeholder="Employee Name">
+            <p><input type="text" name="addempsecondname"
+                placeholder="Employee Second Name">
             </p>
             <p><input type="text" name="addjobtitle"
                 placeholder="Job Title">
@@ -51,7 +62,7 @@
             <button id="addsalaried">Salaried</button>
             <button id="addhourly">Hourly</button>
 
-            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+            <p id="submit"><input type="submit" name="addsubmit" value="Enter"></p>
         </form>
     </div>
 
@@ -60,14 +71,17 @@
             <p><input type="text" name="addemail"
                 placeholder="Employee E-mail to Delete">
             </p>
-            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+            <p id="submit"><input type="submit" name="deletesubmit" value="Enter"></p>
         </form>
     </div>
 
     <div hidden id="updateinfo" class="update">
         <form class="updateinfo-container">
-            <p><input type="text" name="empname"
-                placeholder="Employee Name">
+            <p><input type="text" name="updateempfirstname"
+                placeholder="Employee First Name">
+            </p>
+            <p><input type="text" name="updateempsecondname"
+                placeholder="Employee Second Name">
             </p>
             <p><input type="Job Title" name="jobtitle"
                 placeholder="Job Title"
@@ -94,7 +108,7 @@
             <h3>Update the employee's salary type:</h3>
                 <button id="salaried">Salaried</button>
                 <button id="hourly">Hourly</button>
-            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+            <p id="submit"><input type="submit" name="updatesubmit" value="Enter"></p>
         </form>
     </div>
 
