@@ -1,5 +1,5 @@
-const express = require("express")
-var app = express()
+const config = require(./db)
+
 
 const addEmpBtn = document.getElementById('addemployee')
 const delEmpBtn = document.getElementById('deletemployee')

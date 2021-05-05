@@ -88,7 +88,7 @@ app.post('/signup', (req, res) => {
             message: 'Registration Complete. Please login to continue.',
             messageClass: 'alert-success'
         });
-    // } else {
+    }// else {
     //     res.render('signup', {
     //         message: 'Password does not match.',
     //         messageClass: 'alert-danger'
