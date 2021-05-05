@@ -46,10 +46,10 @@ app.post('/signinchecked', (req, res) => {
     console.log(email)
     client.query('SELECT 1 FROM employee_user where user_email=$1::text and password=$2::text',[email,password],(err,res2)=>{
         console.log(err,res);
-        if (res2.rowCount === 2) {
+        if (res2.rowCount === 1) {
             res.render('employeepage', {
                 topnav: { logged_in: true }
-            }
+            });
         }
     });
     res.render('employeepage',{
@@ -70,8 +70,15 @@ app.get('/about', function (req, res) {
 app.post('/admincheck',(req,res)=>{
     const { email, password } = req.body;
     console.log(email)
-    client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[email,password],(err,res)=>{
-        console.log(err,res);
+    client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[email,password],(err,res2)=>{
+        if (res2.rowCount === 1) {
+            res.render('adminpage', {
+                topnav: { logged_in: true }
+            });
+        }
+        res.render('adminsignin', {
+            topnav: { logged_in: false }
+        });
 
     });
 
@@ -82,9 +89,11 @@ const getHashedPassword = (password) => {
     const hash = sha256.update(password).digest('base64');
     return hash;
 }
-
+app.get('/signup',(req,res) => {
+    res.render('signup',)
+})
 // change to click from admin portal button
-app.post('/signup', (req, res) => {
+app.get('/signupchecked', (req, res) => {
     const { ssn, first, last, password, passwordConfirm } = req.body;
 
     // Check if the password and confirm password fields match
