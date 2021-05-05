@@ -265,27 +265,4 @@ create table bonus
 alter table bonus
     owner to postgres;
 
-create view w2_view(ssn, base_salary, extra_earning) as
-SELECT "Employee".ssn,
-       "Employee".base_salary,
-       CASE
-           WHEN "Employee".salary_type::text = 'salaried'::text AND "Employee".performance::text = 'good'::text AND
-                "Employee".is_manager = false THEN "Employee".base_salary::numeric +
-                                                   b.bonus_perc * "Employee".base_salary::numeric
-           WHEN "Employee".salary_type::text = 'salaried'::text AND "Employee".performance::text = 'ok'::text AND
-                "Employee".is_manager = false THEN "Employee".base_salary::numeric +
-                                                   0.5 * b.bonus_perc * "Employee".base_salary::numeric
-           WHEN "Employee".salary_type::text = 'salaried'::text AND "Employee".performance::text = 'bad'::text AND
-                "Employee".is_manager = false THEN "Employee".base_salary::numeric
-           WHEN "Employee".salary_type::text = 'salaried'::text AND "Employee".performance::text = 'amazing'::text AND
-                "Employee".is_manager = false OR "Employee".is_manager = true THEN "Employee".base_salary::numeric +
-                                                                                   1.5 * b.bonus_perc * "Employee".base_salary::numeric
-           ELSE 0::numeric
-           END AS extra_earning
-FROM "Employee"
-         JOIN bonus b ON "Employee".employer_id = b.employer_id;
-
-alter table w2_view
-    owner to postgres;
-
 

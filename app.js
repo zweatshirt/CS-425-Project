@@ -50,7 +50,7 @@ app.get('/about', function (req, res) {
 });
 app.get('/admincheck',(req,res)=>{
     const { text, password } = req.query;
-    
+    console.log(text)
     client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[text,password],(err,res)=>{
         console.log(err,res);
         
