@@ -1,6 +1,6 @@
 const { Client } = require('pg');
 
-config = {
+const config = {
     client: new Client({
         user: 'postgres',
         host: '127.0.0.1',
