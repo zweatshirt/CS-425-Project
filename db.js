@@ -11,4 +11,4 @@ const config = {
 }
 
 // connect after exporting
-module.exports = config;
+module.exports = config.client;
