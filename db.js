@@ -7,8 +7,8 @@ const config = {
         database: 'postgres',
         password: '1234abcd',
         port: 5432,
-    });
+    }),
 }
 
 // connect after exporting
-module.exports = config;
+module.exports = config.client;

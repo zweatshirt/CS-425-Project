@@ -4,16 +4,16 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const crypto = require('crypto');
 const path = require('path')
-const express = require("express")
-
+const express = require("express");
+const { get } = require('http');
+const client = require('./db')
+client.connect()
 var app = express()
 var logged_in = false;
 
 // support url encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// probably not necessary
-app.use(cookieParser());
+app.use(express.static('views/layouts/'))
 
 // engine needed for template engine    `
 app.engine('hbs', exphbs({
@@ -23,7 +23,7 @@ app.engine('hbs', exphbs({
 }));
 
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, '/views/layouts'));
+app.set('views', path.join(__dirname, '/views/layouts/'));
 
 app.get('/', function (req, res) {
     res.render('home',{
@@ -32,7 +32,9 @@ app.get('/', function (req, res) {
         }
     });
 });
-
+app.get('/adminsignin',(req,res) => {
+    res.render('adminsignin',{topnav: { logged_in: logged_in }})
+})
 // called on user sign up form submit
 app.get('/signup', (req, res) => {
     res.render('signup',{topnav: { logged_in: logged_in }});
@@ -46,7 +48,15 @@ app.get('/about', function (req, res) {
         }
     });
 });
+app.get('/admincheck',(req,res)=>{
+    const { text, password } = req.query;
+    
+    client.query('SELECT 1 FROM public.admin_user where user_email=$1::text and password=$2::text',[text,password],(err,res)=>{
+        console.log(err,res);
+        
+    });
 
+});
 // for hashing passwords
 const getHashedPassword = (password) => {
     const sha256 = crypto.createHash('sha256');

@@ -5,7 +5,13 @@
     <meta charset="utf-8">
     <title> User Sign-in </title>
     <link rel="stylesheet" type="text/css" href="css/signinstyle.css" />
-    <script type="text/javascript" src="signin.js"></script>
+   
+    <script type="module" src="js/signin.js" > </script>  
+        
+       
+    
+
+
 </head>
 
 <body>
@@ -13,15 +19,15 @@
     <div class="signin">
         <h1 class="signin-header">Sign-in</h1>
 
-        <form class="signin-container">
-            <p><input type="adminuser" name="text"
-                placeholder="Administrator Username">
+        <form class="signin-container" id="adminsigninform" action='/admincheck'>
+            <p><input type="adminuser" name="email"
+                placeholder="Administrator email">
             </p>
             <p><input type="password" name="password"
                 placeholder="Administrator Password"
             </p>
             <small></small>
-            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+            <p id="submit"><input type="submit" name="submit" value="Enter" ></p>
         </form>
     </div>
 
