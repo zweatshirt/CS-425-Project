@@ -53,6 +53,7 @@ const getHashedPassword = (password) => {
     return hash;
 }
 
+// change to click from admin portal button
 app.post('/signup', (req, res) => {
     const { ssn, first, last, password, passwordConfirm } = req.body;
 
@@ -74,23 +75,24 @@ app.post('/signup', (req, res) => {
         const hashedPassword = getHashedPassword(password);
 
         // switch to store user in db
-        users.push({
-            firstName,
-            lastName,
-            email,
-            password: hashedPassword
-        });
+        // users.push({
+        //     firstName,
+        //     lastName,
+        //     email,
+        //     password: hashedPassword
+        // });
+
 
         res.render('signin', {
             message: 'Registration Complete. Please login to continue.',
             messageClass: 'alert-success'
         });
-    } else {
-        res.render('signup', {
-            message: 'Password does not match.',
-            messageClass: 'alert-danger'
-        });
-    }
+    // } else {
+    //     res.render('signup', {
+    //         message: 'Password does not match.',
+    //         messageClass: 'alert-danger'
+    //     });
+    // }
 });
 
 

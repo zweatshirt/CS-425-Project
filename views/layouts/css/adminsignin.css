@@ -1,0 +1,62 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background: #4a4a5a;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF
+}
+
+.signin {
+  width: 420px;
+  margin: 16px auto;
+}
+
+.signin-header,
+.signin p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.signin-header {
+  padding: 18px;
+  background: #227581;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.signin-container, .signin p {
+  background: #f7f7f7;
+  padding: 14px;
+}
+
+.signin input {
+  font-size: 1em;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 18px;
+  border-width: .5px;
+  border-style: solid;
+}
+
+.signin input[type="text"],
+.signin input[type="password"] {
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.signin input[type="submit"] {
+  background: #227581;
+  color: #ffffff
+}
+.login input[type="submit"]:hover {
+  background: #dddddd;
+}
+
+.signin input[type="text"]:focus,
+.signin input[type="password"]:focus {
+  border-color: #dddddd;
+}

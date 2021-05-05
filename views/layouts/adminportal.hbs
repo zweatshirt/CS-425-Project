@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="adminportal.js"></script>
+</head>
+
+<header>
+    <link rel="stylesheet" href="css/adminportal.css">
+
+</header>
+<body>
+    <div id="adminoptions" class="selection">
+        <h2> Choose an option:</h2>
+        <div class="btn-group">
+            <button id="add">Add new employee.</button>
+            <button id="delete">Delete pre-existing employee.</button>
+            <button id="updateemployee">Update employee info.</button>
+            <button id="report">Employee expense report</button>
+            <button id="updateemployer">Update employer info.</button>
+
+        </div>
+    </div>
+
+    <div hidden id="addemployee" class="addemployee">
+        <form class="add-container">
+            <p><input type="text" name="addemail"
+                placeholder="Employee E-mail">
+            </p>
+            <p><input type="text" name="addemppassword"
+                placeholder="Employee Password">
+            </p>
+            <p><input type="text" name="addssn"
+                placeholder="Employee SSN">
+            </p>
+            <p><input type="text" name="addempname"
+                placeholder="Employee Name">
+            </p>
+            <p><input type="text" name="addempsalarytype"
+                placeholder="Employee Name">
+            </p>
+            <p><input type="text" name="addjobtitle"
+                placeholder="Job Title">
+            </p>
+            <p><input type="text" name="addjobtitle"
+                placeholder="Employee State">
+            </p>
+            <p><input type="text" name="401k"
+                placeholder="401k Contribution">
+            </p>
+            <h3>Enter the employee's salary type:</h3>
+            <button id="addsalaried">Salaried</button>
+            <button id="addhourly">Hourly</button>
+
+            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+        </form>
+    </div>
+
+    <div hidden id="deleteemployee" class="deleteemployee">
+        <form class="delete-container">
+            <p><input type="text" name="addemail"
+                placeholder="Employee E-mail to Delete">
+            </p>
+            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+        </form>
+    </div>
+
+    <div hidden id="updateinfo" class="update">
+        <form class="updateinfo-container">
+            <p><input type="text" name="empname"
+                placeholder="Employee Name">
+            </p>
+            <p><input type="Job Title" name="jobtitle"
+                placeholder="Job Title"
+            </p>
+            <h3>Enter only what you want to change:</h3>
+            <p><input type="text" name="addresschangee"
+                placeholder="Change Address">
+            </p>
+            <p><input type="text" name="updateperformance"
+                placeholder="Update Employee Performance">
+            </p>
+            <p><input type="text" name="updateaddress"
+                placeholder="Update Employee Address"
+            </p>
+            <p><input type="text" name="401k"
+                placeholder="Update 401k Contribution">
+            </p>
+            <h3>Update the employee's tax bracket:
+                <select name="taxbracket"
+                    <option value="taxbracket1">Tax Bracket 1</option>
+                    <option value="taxbracket2">Tax Bracket 2</option>
+                    <option value="taxbracket3">Tax Bracket 3</option>
+                </select>
+            <h3>Update the employee's salary type:</h3>
+                <button id="salaried">Salaried</button>
+                <button id="hourly">Hourly</button>
+            <p id="submit"><input type="submit" name="submit" value="Enter"></p>
+        </form>
+    </div>
+
+</body>
+</html>
