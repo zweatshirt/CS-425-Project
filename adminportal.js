@@ -11,9 +11,15 @@ document.getElementById('updateemployee').onclick = function() {
 }
 
 document.getElementById('report').onclick = function() {
-    document.getElementById('updateemplyer').style.visibility = 'visible';
+    document.getElementById('expensereport-1').style.visibility = 'visible';
 }
 
-document.getElementById('updateemployee').onclick = function() {
-    document.getElementById('updateinfo').style.visibility = 'visible';
+document.getElementById('addemployer').onclick = function() {
+    document.getElementById('addemployer-1').style.visibility = 'visible';
 }
+
+document.getElementById('updateemployer').onclick = function() {
+    document.getElementById('updateemployer-1').style.visibility = 'visible';
+}
+
+document.getElement

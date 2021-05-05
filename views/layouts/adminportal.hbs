@@ -16,13 +16,56 @@
             <button id="delete">Delete pre-existing employee.</button>
             <button id="updateemployee">Update employee info.</button>
             <button id="report">Employee expense report</button>
+            <button id="addemployer">Add new employer.</button>
             <button id="updateemployer">Update employer info.</button>
-            <button id="createw2-1">Create employee W2</button>
+            <button id="createw2">Create employee W2</button>
         </div>
     </div>
 
+    <div hidden id="addemployer-1" class="container">
+        <form class="form-container">
+            <p><input type="text" name="employerid"
+                placeholder="Employer ID">
+            </p>
+            <p><input type="text" name="companyname"
+                placeholder="Company Name">
+            </p>
+            <p><input type="text" name="companysale"
+                placeholder="Company Sale">
+            </p>
+            <p><input type="" name="insuranceprem"
+                placeholder="Insurance Premium Contribution">
+            </p>
+            <p><input type="text" name="401kcompanymatch"
+                placeholder="401k Company Match">
+            </p>
+            <p id="addemployersubmit"><input type="submit" name="updateemploersubmit" value="Enter"></p>
+        </form>
+    </div>
 
-    <div hidden id="createw2-2" class="container">
+    <div hidden id="updateemployer-1" class="container">
+        <form class="form-container">
+            <p><input type="text" name="employerid"
+                placeholder="Employer ID">
+            </p>
+            <h3>Enter only what you want to change:</h3>
+            <p><input type="text" name="companyname"
+                placeholder="Company Name">
+            </p>
+            <p><input type="text" name="companysale"
+                placeholder="Company Sale">
+            </p>
+            <p><input type="" name="insuranceprem"
+                placeholder="Insurance Premium Contribution">
+            </p>
+            <p><input type="text" name="401kcompanymatch"
+                placeholder="401k Company Match">
+            </p>
+            <p id="updateemployersubmit"><input type="submit" name="expensesubmit" value="Enter"></p>
+        </form>
+    </div>
+
+    <div hidden id="createw2-1" class="container">
         <form class="form-container">
             <p><input type="text" name="w2firstname"
                 placeholder="Employee First Name">
@@ -31,21 +74,19 @@
                 placeholder="Employee Second Name">
             </p>
         </form>
-
-            <p id="submit"><input type="submit" name="addsubmit" value="Enter"></p>
-
+        <button id="createw2-1submit"><input type="submit" name="addsubmit" value="Enter"></p>
     </div>
 
-    <div hidden id="createw2-3" class="p-container">
+    <div hidden id="createw2-2" class="p-container">
         <p id="w2ssn"></p>
         <p id="w2earnedincome"></p>
         <p id="w2deductions"></p>
         <p id="w2bonus"></p>
         <p id="employerinsurancecontribution"></p>
         <button id="w2clear">Clear Information</button>
-        </div>
+    </div>
 
-    <div hidden id="expensereportpt1" class="container">
+    <div hidden id="expensereport-1" class="container">
         <form class="form-container">
             <p><input type="text" name="reportempfirstname"
                 placeholder="Employee First Name">
@@ -54,11 +95,11 @@
                 placeholder="Employee Second Name">
             </p>
 
-            <p id="submit"><input type="submit" name="expensesubmit" value="Enter"></p>
+            <p id="expensereport-1submit"><input type="submit" name="expensesubmit" value="Enter"></p>
         </form>
     </div>
 
-    <div hidden id="expensereportpt2" class="p-container">
+    <div hidden id="expensereport-2" class="p-container">
         <p id="expensewages"></p>
         <p id="expensebonus"></p>
         <p id="401kemployeecontribution"></p>
@@ -93,11 +134,18 @@
             <p><input type="text" name="401k"
                 placeholder="401k Contribution">
             </p>
+            <h3>Enter the employee's tax bracket:
+                <select name="taxbracket">
+                    <option value="taxbracket1">Tax Bracket 1</option>
+                    <option value="taxbracket2">Tax Bracket 2</option>
+                    <option value="taxbracket3">Tax Bracket 3</option>
+                </select>
             <h3>Enter the employee's salary type:</h3>
-            <button id="addsalaried">Salaried</button>
-            <button id="addhourly">Hourly</button>
-
-            <p id="submit"><input type="submit" name="addsubmit" value="Enter"></p>
+                <select name="taxbracket">
+                    <option value="salaried">Salaried</option>
+                    <option value="hourly">Hourly</option>
+                </select>
+            <p id="addemployeesubmit"><input type="submit" name="addsubmit" value="Enter"></p>
         </form>
     </div>
 
@@ -135,14 +183,16 @@
                 placeholder="Update 401k Contribution">
             </p>
             <h3>Update the employee's tax bracket:
-                <select name="taxbracket"
+                <select name="taxbracket">
                     <option value="taxbracket1">Tax Bracket 1</option>
                     <option value="taxbracket2">Tax Bracket 2</option>
                     <option value="taxbracket3">Tax Bracket 3</option>
                 </select>
             <h3>Update the employee's salary type:</h3>
-                <button id="salaried">Salaried</button>
-                <button id="hourly">Hourly</button>
+            <select name="taxbracket">
+                <option value="salaried">Salaried</option>
+                <option value="hourly">Hourly</option>
+            </select>
             <p id="submit"><input type="submit" name="updatesubmit" value="Enter"></p>
         </form>
     </div>
