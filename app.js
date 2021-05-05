@@ -48,10 +48,10 @@ app.get('/about', function (req, res) {
         }
     });
 });
-app.get('/admincheck',(req,res)=>{
-    const { text, password } = req.query;
-    console.log(text)
-    client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[text,password],(err,res)=>{
+app.post('/admincheck',(req,res)=>{
+    const { email, password } = req.body;
+    console.log(email)
+    client.query('SELECT 1 FROM admin_user where user_email=$1::text and password=$2::text',[email,password],(err,res)=>{
         console.log(err,res);
         
     });

@@ -19,8 +19,8 @@
     <div class="signin">
         <h1 class="signin-header">Sign-in</h1>
 
-        <form class="signin-container" id="adminsigninform" action='/admincheck'>
-            <p><input type="adminuser" name="email"
+        <form class="signin-container" id="adminsigninform" action='/admincheck' method="POST">
+            <p><input type="email" name="email"
                 placeholder="Administrator email">
             </p>
             <p><input type="password" name="password"
