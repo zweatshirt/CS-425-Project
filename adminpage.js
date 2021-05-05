@@ -1,5 +1,5 @@
-const config = require(./db)
-
+const client = require(./db)
+client.connect()
 
 const addEmpBtn = document.getElementById('addemployee')
 const delEmpBtn = document.getElementById('deletemployee')
@@ -17,7 +17,6 @@ const expenseReportForm = document.getElementById('expensereport-1')
 const expenseReportDiv = document.getElementById('expensereport-2')
 const updateEmployeeForm = document.getElementById('updateemployee-1')
 const deleteEmployeeForm = document.getElementById('deleteemployee')
-
 
 addEmpBtn.onclick = function() {
     addEmployeeForm.style.visibility = 'visible';
@@ -54,6 +53,17 @@ function updateEmployerSubmit() {}
 
 function createW2Submit() {
     createW2Form.style.visibility = 'invisible';
+    //const text = 'SELECT FROM '
+    //const values = ['brianc', 'brian.m.carlson@gmail.com']
+    // callback
+    // client.query(text, values, (err, res) => {
+    //   if (err) {
+    //     console.log(err.stack)
+    //   } else {
+    //     console.log(res.rows[0])
+    //     // { name: 'brianc', email: 'brian.m.carlson@gmail.com' }
+    //   }
+    // })
     createW2InfoDiv.style.visibility = 'visible';
 
 }
