@@ -17,23 +17,58 @@
             <button id="updateemployee">Update employee info.</button>
             <button id="report">Employee expense report</button>
             <button id="updateemployer">Update employer info.</button>
-
+            <button id="createw2-1">Create employee W2</button>
         </div>
     </div>
 
-    <div hidden id="expensereport" class="expensereport">
-        <form class="report-container">
-            <p><input type="text" name="reportname"
-                placeholder="Employee E-mail">
-            </p>
 
+    <div hidden id="createw2-2" class="container">
+        <form class="form-container">
+            <p><input type="text" name="w2firstname"
+                placeholder="Employee First Name">
+            </p>
+            <p><input type="text" name="w2secondname"
+                placeholder="Employee Second Name">
+            </p>
+        </form>
 
             <p id="submit"><input type="submit" name="addsubmit" value="Enter"></p>
+
+    </div>
+
+    <div hidden id="createw2-3" class="p-container">
+        <p id="w2ssn"></p>
+        <p id="w2earnedincome"></p>
+        <p id="w2deductions"></p>
+        <p id="w2bonus"></p>
+        <p id="employerinsurancecontribution"></p>
+        <button id="w2clear">Clear Information</button>
+        </div>
+
+    <div hidden id="expensereportpt1" class="container">
+        <form class="form-container">
+            <p><input type="text" name="reportempfirstname"
+                placeholder="Employee First Name">
+            </p>
+            <p><input type="text" name="reportempsecondname"
+                placeholder="Employee Second Name">
+            </p>
+
+            <p id="submit"><input type="submit" name="expensesubmit" value="Enter"></p>
         </form>
     </div>
 
-    <div hidden id="addemployee" class="addemployee">
-        <form class="add-container">
+    <div hidden id="expensereportpt2" class="p-container">
+        <p id="expensewages"></p>
+        <p id="expensebonus"></p>
+        <p id="401kemployeecontribution"></p>
+        <p id="401kemployercontribution"></p>
+        <p id="employerinsurancecontribution"></p>
+        <button id="expensereportclear">Clear Information</button>
+    </div>
+
+    <div hidden id="addemployee" class="container">
+        <form class="form-container">
             <p><input type="text" name="addemail"
                 placeholder="Employee E-mail">
             </p>
@@ -75,8 +110,8 @@
         </form>
     </div>
 
-    <div hidden id="updateinfo" class="update">
-        <form class="updateinfo-container">
+    <div hidden id="updateinfo" class="container">
+        <form class="form-container">
             <p><input type="text" name="updateempfirstname"
                 placeholder="Employee First Name">
             </p>
