@@ -21,5 +21,6 @@ document.getElementById('addemployer').onclick = function() {
 document.getElementById('updateemployer').onclick = function() {
     document.getElementById('updateemployer-1').style.visibility = 'visible';
 }
-
-document.getElement
+document.getElementById('createw2').onclick = function() {
+    document.getElementById('createw2-1').style.visibility = 'visible';
+}
