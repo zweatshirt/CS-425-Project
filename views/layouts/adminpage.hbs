@@ -2,14 +2,16 @@
 <html>
 <head>
     <script type="text/javascript" src="adminpage.js"></script>
-    <link rel="stylesheet" href="css/adminportal.css">
+    <link rel="stylesheet" href="css/adminpage.css">
 </head>
 
 <header>
 </header>
 <body>
+    <div class="CssContainer">
     <div id="adminoptions" class="selection">
-        <h2> Choose an option:</h2>
+        <div class="headingTag"><h2> Choose an option:</h2>
+        </div>
         <div class="btn-group">
             <button id="add">Add new employee.</button>
             <button id="delete">Delete pre-existing employee.</button>
@@ -42,7 +44,7 @@
         </form>
     </div>
 
-    <div hidden id="updateemployer-1" class="container">
+    <div hidden  id="updateemployer-1" class="container">
         <form class="form-container" onsubmit="updateEmployerSubmit()">
             <p><input type="text" name="employerid"
                 placeholder="Employer ID">
@@ -195,6 +197,6 @@
             <p id="submit"><input type="submit" name="updatesubmit" value="Enter"></p>
         </form>
     </div>
-
+</div>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <div class="CssContainer">
 
         <div id="employeeoptions" class="selection">
-            <h2> Choose an option:</h2>
+            <div class="headingTag"><h2> Choose an option:</h2></div>
             <div class="btn-group">
                 <button id="adddependent">Add new dependent.</button>
                 <button id="updateaddress">Update address.</button>
@@ -24,7 +24,7 @@
 
 <div class="clear"></div>
 
-        <div id="adddependent-1" class="container">
+        <div hidden id="adddependent-1" class="container">
                 <form class="form-container" onsubmit="addDependentSubmit()">
                     <p><input type="text" name="dependentname"
                         placeholder="Employer ID">
@@ -42,7 +42,7 @@
                 </form>
         </div>
 
-        <div id="updateaddress-1" class="container">
+        <div hidden id="updateaddress-1" class="container">
                 <form class="form-container" onsubmit="updateAddressSubmit()">
                     <p><input type="text" name="dependentname"
                         placeholder="New Address">
@@ -51,7 +51,7 @@
                 </form>
         </div>
 
-        <div id="update401k-1" class="container">
+        <div hidden id="update401k-1" class="container">
                 <form class="form-container" onsubmit="update401k-1" onsubmit="update401kSubmit()">
                     <p><input type="text" name="401kcontribution"
                         placeholder="New 401k Contribution">
