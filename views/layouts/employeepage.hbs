@@ -2,7 +2,7 @@
 <html>
 <head>
     <script type="text/javascript" src="employeepage.js"></script>
-    <link rel="stylesheet" href="css/adminportal.css">
+    <link rel="stylesheet" href="css/employeepage.css">
 
 </head>
 
@@ -10,50 +10,55 @@
 </header>
 
 <body>
-    <div id="employeeoptions" class="selection">
-        <h2> Choose an option:</h2>
-        <div class="btn-group">
-            <button id="adddependent">Add new dependent.</button>
-            <button id="updateaddress">Update address.</button>
-            <button id="update401k">Update 401k contribution.</button>
-            <button id="paycheck">View paycheck.</button>
+    <div class="CssContainer">
+
+        <div id="employeeoptions" class="selection">
+            <h2> Choose an option:</h2>
+            <div class="btn-group">
+                <button id="adddependent">Add new dependent.</button>
+                <button id="updateaddress">Update address.</button>
+                <button id="update401k">Update 401k contribution.</button>
+                <button id="paycheck">View paycheck.</button>
+            </div>
         </div>
-    </div>
 
-    <div hidden id="adddependent-1" class="container">
-            <form class="form-container" onsubmit="addDependentSubmit()">
-                <p><input type="text" name="dependentname"
-                    placeholder="Employer ID">
-                </p>
-                <p><input type="text" name="dependentssn"
-                    placeholder="SSN">
-                </p>
-                <h3>Enter the employee's tax bracket:
-                    <select name="dependentrelation">
-                        <option value="father">Father</option>
-                        <option value="mother">Mother</option>
-                        <option value="sibling">Sibling</option>
-                    </select>
-                <p id="adddependentsubmit"><input type="submit" name="adddependentsubmit" value="Enter"></p>
-            </form>
-    </div>
+<div class="clear"></div>
 
-    <div hidden id="updateaddress-1" class="container">
-            <form class="form-container" onsubmit="updateAddressSubmit()">
-                <p><input type="text" name="dependentname"
-                    placeholder="New Address">
-                </p>
-                <p id="addresssubmit"><input type="submit" name="addresssubmit" value="Enter"></p>
-            </form>
-    </div>
+        <div id="adddependent-1" class="container">
+                <form class="form-container" onsubmit="addDependentSubmit()">
+                    <p><input type="text" name="dependentname"
+                        placeholder="Employer ID">
+                    </p>
+                    <p><input type="text" name="dependentssn"
+                        placeholder="SSN">
+                    </p>
+                    <h3>Enter the employee's tax bracket:
+                        <select name="dependentrelation">
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="sibling">Sibling</option>
+                        </select>
+                    <p id="adddependentsubmit"><input type="submit" name="adddependentsubmit" value="Enter"></p>
+                </form>
+        </div>
 
-    <div hidden id="update401k-1" class="container">
-            <form class="form-container" onsubmit="update401k-1" onsubmit="update401kSubmit()">
-                <p><input type="text" name="401kcontribution"
-                    placeholder="New 401k Contribution">
-                </p>
-                <p id="update401ksubmit"><input type="submit" name="update401ksubmit" value="Enter"></p>
-            </form>
-    </div>
+        <div id="updateaddress-1" class="container">
+                <form class="form-container" onsubmit="updateAddressSubmit()">
+                    <p><input type="text" name="dependentname"
+                        placeholder="New Address">
+                    </p>
+                    <p id="addresssubmit"><input type="submit" name="addresssubmit" value="Enter"></p>
+                </form>
+        </div>
+
+        <div id="update401k-1" class="container">
+                <form class="form-container" onsubmit="update401k-1" onsubmit="update401kSubmit()">
+                    <p><input type="text" name="401kcontribution"
+                        placeholder="New 401k Contribution">
+                    </p>
+                    <p id="update401ksubmit"><input type="submit" name="update401ksubmit" value="Enter"></p>
+                </form>
+        </div>
     
+    </div>
 </body>
