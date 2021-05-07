@@ -62,6 +62,28 @@ app.post('/addemployee', (req, res) => {
     // add taxbracket
 });
 
+app.post('/updateemployee', (req, res) => {
+    console.log(req.body)
+    const { updateemail, updateemppassword, updatessn,
+        updateempname, updatejobtitle, updatesalary,
+            updateperformance, updatecont, updateempstate,
+            updateempid,updatebase_salary ,updateManager,updateaddress} = req.body;
+    client.query('UPDATE "Employee" set ssn = $1,name = $2,job_title = $3,salary_type = $4,performance = $5,contribution = $6,state = $7,employer_id = $8,email_address = $9,is_manager = $10,address = $11,base_salary = $12 WHERE ssn = $1',
+                [updatessn,updateeempname,updatejobtitle,updatesalary,updateeperformance,updatecont,updateempstate,updateempid,updateemail,updateManager,updateaddress,updatebase_salary],(err1,res3)=>{
+                console.log(err1,res3);
+            });
+    client.query('INSERT INTO employee_user(user_email,password) VALUES($1::text,$2::text)',
+        [updateemail,updateemppassword],(err,res2)=>{
+        console.log(err,res2);
+
+    });
+
+    res.render('adminpage',{topnav:{logged_in:true}})
+    // add taxbracket
+});
+
+
+
 app.post('/deleteemployee', (req, res) =>{
     const{ addemail ,
     } =req.body;
