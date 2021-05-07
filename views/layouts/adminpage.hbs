@@ -186,16 +186,16 @@
 
     <div id="updateemployee-1" class="container">
         <h1>Update Employee:</h1>
-        <form class="form-container">
-            <p><input type="text" name="updateempname"
+        <form class="form-container",action="/updateemployee",method="POST">
+            <p><input type="text" name="updateempname"``
                 placeholder="Employee Name">
             </p>
             <p><input type="Job Title" name="updatejobtitle"
                 placeholder="Job Title"
             </p>
             <h3>Enter only what you want to change:</h3>
-            <p><input type="text" name="updateaddress"
-                placeholder="Change Address">
+            <p><input type="text" name="updatemailaddress"
+                placeholder="Change email Address">
             </p>
             <p><input type="text" name="updateperformance"
                 placeholder="Update Employee Performance">
@@ -206,28 +206,21 @@
             <p><input type="text" name="update401k"
                 placeholder="Update 401k Contribution">
             </p>
-            <h3>Update the employee's tax bracket:
-                <select class="box" name="updatetaxbracket">
-                    <option value="taxbracket1">Tax Bracket 1</option>
-                    <option value="taxbracket2">Tax Bracket 2</option>
-                    <option value="taxbracket3">Tax Bracket 3</option>
-                </select>
+
             <h3>Update the employee's salary type:</h3>
             <select class="box" name="updatesalary">
                 <option value="salaried">Salaried</option>
                 <option value="hourly">Hourly</option>
             </select>
+            <p><input type="text" name="updatebase_salary"
+                placeholder="Update base salary">
+            </p>
+
             <p id="submit"><input type="submit" name="updatesubmit" value="Enter"></p>
         </form>
     </div>
 
-<<<<<<< HEAD
-=======
 
-
-
-
->>>>>>> ace03a9fc02f86dbfb1ee74ced377412c1109bae
 </div>
 </body>
 </html>

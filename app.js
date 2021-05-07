@@ -155,25 +155,25 @@ app.get('/signup',(req,res) => {
     });
 })
 // change to click from admin portal button
-app.get('/signupchecked', (req, res) => {
-    const { ssn, first, last, password, passwordConfirm } = req.body;
+app.post('/signup', (req, res) => {
+    const { email, password, name, ssn } = req.body;
 
     // Check if the password and confirm password fields match
-    if (password === confirmPassword) {
+    //if (password === confirmPassword) {
 
         // Check if user with the same email is also registered
         // fix to check db
-        if (users.find(user => user.email === email)) {
+        // if (users.find(user => user.email === email)) {
+        //
+        //     res.render('register', {
+        //         message: 'User already registered.',
+        //         messageClass: 'alert-danger'
+        //     });
+        //
+        //     return;
+        // }
 
-            res.render('register', {
-                message: 'User already registered.',
-                messageClass: 'alert-danger'
-            });
-
-            return;
-        }
-
-        const hashedPassword = getHashedPassword(password);
+        // const hashedPassword = getHashedPassword(password);
 
         // switch to store user in db
         // users.push({
@@ -183,7 +183,15 @@ app.get('/signupchecked', (req, res) => {
         //     password: hashedPassword
         // });
 
+        client.query('INSERT INTO "Employee"(ssn,name,email_address) VALUES($1,$2,$3)',
+                    [ssn,name,email],(err1,res3)=>{
+                    console.log(err1,res3);
 
+                });
+        client.query('INSERT INTO employee_user(user_email,password) VALUES($1::text,$2::text)',
+            [email,password],(err,res2)=>{
+            console.log(err,res2);
+        });
         res.render('signin', {
             message: 'Registration Complete. Please login to continue.',
             messageClass: 'alert-success'
@@ -194,6 +202,7 @@ app.get('/signupchecked', (req, res) => {
     //         messageClass: 'alert-danger'
     //     });
     // }
+    //NEED TO ADD employee portal
 });
 
 
