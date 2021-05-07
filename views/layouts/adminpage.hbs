@@ -26,7 +26,7 @@
 
     <div id="addemployer-1" class="container">
         <h1>Add Employer:</h1>
-        <form class="form-container" onsubmit="addEmployerSubmit()">
+        <form class="form-container" action="/addemployer" method="POST">
             <p><input type="text" name="employerid"
                 placeholder="Employer ID">
             </p>
@@ -39,7 +39,7 @@
             <p><input type="" name="insuranceprem"
                 placeholder="Insurance Premium Contribution">
             </p>
-            <p><input type="text" name="401kcompanymatch"
+            <p><input type="text" name="contriMatch"
                 placeholder="401k Company Match">
             </p>
             <p id="addemployersubmit"><input type="submit" name="addemployersubmit" value="Enter"></p>
@@ -186,8 +186,13 @@
 
     <div id="updateemployee-1" class="container">
         <h1>Update Employee:</h1>
+<<<<<<< HEAD
         <form class="form-container",action="/updateemployee",method="POST">
             <p><input type="text" name="updateempname"``
+=======
+        <form class="form-container" action="/updateemployee" method="POST">
+            <p><input type="text" name="updateempname"
+>>>>>>> 9296b56d7a2b57dc3211846d1a614f53268bd1cf
                 placeholder="Employee Name">
             </p>
             <p><input type="Job Title" name="updatejobtitle"
