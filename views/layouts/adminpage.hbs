@@ -78,8 +78,9 @@
             <p><input type="text" name="w2secondname"
                 placeholder="Employee Second Name">
             </p>
-        </form>
         <button id="createw2-1submit"><input type="submit" name="createw2submit" value="Enter"></p>
+        </form>
+        
     </div>
 
     <div id="createw2-2" class="p-container">
@@ -135,12 +136,12 @@
             </p>
 
             <h3>Enter the employee's salary type:</h3>
-                <select name="salary">
+                <select class="box" name="salary">
                     <option value="salaried">Salaried</option>
                     <option value="hourly">Hourly</option>
                 </select>
             <h3>Enter the employee's performance:</h3>
-            <select name="performance">
+            <select class="box" name="performance">
                 <option value="amazing">Amazing</option>
                 <option value="good">Good</option>
                 <option value="ok">Ok</option>
@@ -158,7 +159,7 @@
             <p><input type="text" name="base_salary"
                 placeholder="Base Salary">
             </p>
-            <select name="Manager">
+            <select class="box" name="Manager">
                 <option value="yes">Amazing</option>
                 <option value="no">Good</option>
             </select>
@@ -169,14 +170,8 @@
         </form>
     </div>
 
-<<<<<<< HEAD
-    <div id="deleteemployee" class="deleteemployee">
-        <h1>Delete Employee:</h1>
-        <form class="delete-container">
-=======
     <div hidden id="deleteemployee" class="deleteemployee">
         <form class="delete-container" method="POST" action="/deleteemployee">
->>>>>>> 9f427f1e3fae1a007e475e92a8e1ba686e25f379
             <p><input type="text" name="addemail"
                 placeholder="Employee E-mail to Delete">
             </p>
@@ -207,23 +202,19 @@
                 placeholder="Update 401k Contribution">
             </p>
             <h3>Update the employee's tax bracket:
-                <select name="taxbracket">
+                <select class="box" name="taxbracket">
                     <option value="taxbracket1">Tax Bracket 1</option>
                     <option value="taxbracket2">Tax Bracket 2</option>
                     <option value="taxbracket3">Tax Bracket 3</option>
                 </select>
             <h3>Update the employee's salary type:</h3>
-            <select name="taxbracket">
+            <select class="box" name="taxbracket">
                 <option value="salaried">Salaried</option>
                 <option value="hourly">Hourly</option>
             </select>
             <p id="submit"><input type="submit" name="updatesubmit" value="Enter"></p>
         </form>
     </div>
-
-    
-
-
 
 </div>
 </body>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="managerpage.js"></script>
+    <link rel="stylesheet" href="css/managerpage.css">
+
+</head>
+
+<header>
+</header>
+
+<body>
+
+    <div class="CssContainer">
+
+        <span>
+            <h3>
+                Add a Dependent:
+            </h3>
+        </span>
+
+        <div id="addDependent-1" class="container">
+            <form class="form-container" onsubmit="addDependentSubmit()">
+
+                <p><input type="text" name="EmployeeEmail" placeholder="Employee Email">
+                </p>
+
+                <p><input type="text" name="dependentname" placeholder="Name of your Dependent">
+                </p>
+                <p><input type="text" name="dependentSSN" placeholder="SSN">
+                </p>
+                <h4>Choose your relationship</h4>
+                <select class="box" name="dependentrelation">
+                    <option value="mother">Mother</option>
+                    <option value="father">Father</option>
+                    <option value="spouse">Spouse</option>
+                    <option value="child">Child</option>
+                    <option value="sibling">Sibling</option>
+
+                </select>
+                <p id="addDependentSubmit"><input type="submit" name="addDependentSubmit" value="Enter"></p>
+            </form>
+        </div>
+
+        <span>
+            <h3>
+                Update Your Address:
+            </h3>
+        </span>
+
+        <div id="updateaddress-1" class="container">
+            <form class="form-container" onsubmit="updateAddressSubmit()">
+                <p><input type="text" name="address" placeholder="New Address">
+                </p>
+                <p id="addresssubmit"><input type="submit" name="addresssubmit" value="Enter"></p>
+            </form>
+        </div>
+
+        <span>
+            <h3>
+                Update 401k Contribution:
+            </h3>
+        </span>
+
+        <div id="update401k-1" class="container">
+            <form class="form-container" onsubmit="update401k-1" onsubmit="update401kSubmit()">
+                <p><input type="text" name="401kcontribution" placeholder="New 401k Contribution">
+                </p>
+                <p id="update401ksubmit"><input type="submit" name="update401ksubmit" value="Enter"></p>
+            </form>
+        </div>
+
+        <span>
+            <h3>
+                View PayCheck:
+            </h3>
+        </span>
+
+        <div id="viewPayCheck-2" class="p-container">
+            <form class="form-container" onsubmit="addDependentSubmit()">
+                <h4>Paycheck Information:</h4>
+                <p id="PaycheckSSN"></p>
+                <p id="Total Income"></p>
+                <p id="Income Tax"></p>
+                <p id="Net"></p>
+                <p id="employerinsurancecontribution"></p>
+                <button id="clearInformation">Clear Information</button>
+            </form>
+        </div>
+
+        <div id="perfomaceReview" class="container">
+            <span>
+                <h3>
+                    Manager Priviliges:
+                </h3>
+            </span>
+            <form class="form-container" onsubmit="addDependentSubmit()">
+                <div id="selectperformance">
+                <h4>Enter the employee's performance:</h3>
+                <select class="box" name="performance">
+                    <option value="amazing">Amazing</option>
+                    <option value="good">Good</option>
+                    <option value="ok">Ok</option>
+                    <option value="bad">Bad</option>
+                </select>
+                </div>
+
+                <div id="View" class="p-container">
+                    <h4>Employee Performance:</h4>
+                    <p id="Performance">Performance</p>
+                    <button id="clearInformation">Clear Information</button>
+                    </div>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

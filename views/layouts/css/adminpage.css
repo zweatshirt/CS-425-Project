@@ -82,9 +82,57 @@ input[type=submit],
     /* text-align: right; */
 }
 
-input[type=submit]:active {
+input[type=submit]:active, #w2clear:active, #expensereportclear:active {
   background: #cde5ef;
   border-color: #9eb9c2 #b3c0c8 #b4ccce;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.form-container{
+  padding: 20px;
+  margin: 10px;
+  background: linear-gradient(#446469, #4a5e61); 
+background: -webkit-linear-gradient(#446469, #4a5e61);
+background: -moz-linear-gradient(#446469, #4a5e61);
+background: -o-linear-gradient(#446469, #4a5e61);
+text-align: center;
+border-radius: 30px;
+}
+
+h1{
+  font-size: 35px;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 12px 0px;
+  font-weight: bold; 
+}
+
+h2{
+  font-size: 25px;
+  text-align: center;
+  padding: 20px 20px;
+  margin: 12px 0px;
+  font-weight: bold;
+}
+
+#w2clear, #expensereportclear{
+  text-align: center;
+  margin: 20px 20px 20px 20px; 
+  border-radius: 16px;
+}
+
+.box{
+  width: 100px;
+  height: 20px;
+  margin: 10px 10px;
+  /* padding: 10px 10px;  */
+  font-size: 14px;
+}
+
+.box option{
+   width: 100px;
+  height: 20px;
+  font-size: 14px;
+
 }
