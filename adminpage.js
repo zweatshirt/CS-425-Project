@@ -1,6 +1,6 @@
 let addEmpBtn = document.getElementById('add');
 let deleteEmpBtn = document.getElementById('delete')
-let updateEmpBtn = document.getEelementById('updateemployee')
+let updateEmpBtn = document.getElementById('updateemployee')
 let reportBtn = document.getElementById('report')
 let addEmployerBtn = document.getElementById('addeemployer')
 let updateEmployerBtn = document.getElementById('updateEmployerBtn')
