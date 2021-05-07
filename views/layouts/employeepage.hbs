@@ -12,7 +12,7 @@
     <body>
 
         <div class="CssContainer">
-            
+
             <span>
                 <h3>
                     Add a Dependent:
@@ -20,9 +20,9 @@
             </span>
 
             <div id="addDependent-1" class="container">
-                <form class="form-container" onsubmit="addDependentSubmit()">
+                <form class="form-container">
 
-                    <p><input type="text" name="EmployeeEmail" 
+                    <p><input type="text" name="EmployeeEmail"
                     placeholder="Employee Email">
                     </p>
 
@@ -39,7 +39,7 @@
                         <option value="spouse">Spouse</option>
                         <option value="child">Child</option>
                         <option value="sibling">Sibling</option>
-                        
+
                     </select>
                     <p id="addDependentSubmit"><input type="submit" name="addDependentSubmit" value="Enter"></p>
                 </form>
@@ -66,8 +66,11 @@
             </span>
 
             <div id="update401k-1" class="container">
-                <form class="form-container" onsubmit="update401k-1" onsubmit="update401kSubmit()">
-                    <p><input type="text" name="401kcontribution" placeholder="New 401k Contribution">
+                <form class="form-container" action="/updatek" method="POST">
+                    <p><input type="text" name="ssn" placeholder="SSN to Update">
+                    </p>
+                    <p id="update401ksubmit"><input type="submit" name="update401ksubmit" value="Enter"></p>
+                    <p><input type="text" name="contribution" placeholder="New 401k Contribution">
                     </p>
                     <p id="update401ksubmit"><input type="submit" name="update401ksubmit" value="Enter"></p>
                 </form>
@@ -89,7 +92,7 @@
                     <button id="clearInformation">Clear Information</button>
                 </div>
 
-            
+
         </div>
 
     </body>

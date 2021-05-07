@@ -41,6 +41,18 @@ app.get('/signin', (req, res) => {
 
 })
 
+app.post('/updatek', (req, res) => {
+    // need ssn
+    console.log(req.body)
+    const { ssn, contribution } = req.body;
+    client.query('UPDATE "Employee" contribution = $2 WHERE ssn = $1',
+                [ssn, contribution],(err1,res3)=>{
+                console.log(err1,res3);
+            });
+    res.render('employeepage',{topnav:{logged_in:true}})
+    // add taxbracket
+});
+
 app.post('/addemployee', (req, res) => {
     console.log(req.body)
     const { addemail, addemppassword, addssn,
@@ -107,7 +119,7 @@ app.post('/addemployer', (req, res) => {
 
         });
     res.render('adminpage', { topnav: { logged_in: true } })
-    
+
 });
 
 
