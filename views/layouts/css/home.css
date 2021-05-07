@@ -1,0 +1,23 @@
+body {
+ background-image: url("https://download.pingcap.com/images/blog/choosing-right-database-for-your-applications.png"); 
+  font-family: 'Roboto', sans-serif;
+  /* color: #FFFFFF */
+}
+
+.container {
+    height: 10em;
+    position: relative; 
+}
+
+.container h2{
+    margin: 0;
+    /* background: yellow; */
+    position: absolute;
+    top: 215%;
+    left: 52%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);  
+    color: black;
+    font-size: 3.5em;
+    font-weight: bold;
+}
