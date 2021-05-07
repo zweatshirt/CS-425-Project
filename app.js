@@ -57,6 +57,15 @@ app.post('/addemployee', (req, res) => {
     });
 });
 
+app.post('/deleteemployee', (req, res) =>{
+    const{ email , 
+    } =req.body; 
+    console.log(email); 
+
+    client.query('DELETE FROM employee_user WHERE email = $1::text',[email]); 
+    client.query('DELETE FROM employee WHERE email = $1::text', [email]);
+}); 
+
 // called on user sign up form submit
 app.post('/signinchecked', (req, res) => {
     const { email, password } = req.body;
