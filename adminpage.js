@@ -1,8 +1,8 @@
 const client = require(./db)
 client.connect()
 
-const addEmpBtn = document.getElementById('addemployee')
-const delEmpBtn = document.getElementById('deletemployee')
+const addEmpBtn = document.getElementById('add')
+const delEmpBtn = document.getElementById('delete')
 const updateEmployeeBtn = document.getElementById('updateemployee')
 const updateEmployerBtn = document.getElementById('updateemployer')
 const reportBtn = document.getElementById('report')
