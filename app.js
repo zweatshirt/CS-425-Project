@@ -42,33 +42,34 @@ app.get('/signin', (req, res) => {
 })
 
 app.post('/addemployee', (req, res) => {
-    const { email, password, ssn,
-            name, title, salary,
-            perf, cont, state,
-            id,base_salary ,is_manager,address} = req.body;
-    console.log(email)
-    client.query('INSERT INTO employee_user(user_email,password) VALUES(user_email=$1::text and password=$2::text)',
-        [email,password],(err,res2)=>{
+    console.log(req.body)
+    const { addemail, addemppassword, addssn,
+            addempname, addjobtitle, salary,
+            performance, cont, empstate,
+            addempid,base_salary ,Manager,address} = req.body;
+    client.query('INSERT INTO "Employee"(ssn,name,job_title,salary_type,performance,contribution,state,employer_id,email_address,is_manager,address,base_salary) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12)',
+                [addssn,addempname,addjobtitle,salary,performance,cont,empstate,addempid,addemail,Manager,address,base_salary],(err1,res3)=>{
+                console.log(err1,res3);
+
+            });
+    client.query('INSERT INTO employee_user(user_email,password) VALUES($1::text,$2::text)',
+        [addemail,addemppassword],(err,res2)=>{
         console.log(err,res2);
+
     });
-    client.query(
-        'INSERT INTO employee(ssn,name,job_title,salary_type,performance,401k_contribution,state,employer_id,email_address,is_manager,address,base_salary) \
-        VALUES(ssn=$1::text and name=$2::text and title=$3::text and state=$4::text and employer_id=$5::text and 401k_contribution=$6::text and salary_type=$7::text and performance=$8::text and \
-        base_salary=base_salary::text,email_address=email::text,is_manager=is_manager::text,address=address::text)',
-        [ssn,name,title,state,id,cont,salary,perf,base_salary,email,is_manager,address],(err1,res3)=>{
-        console.log(err1,res3);
-    });
+
+
     // add taxbracket
 });
 
 app.post('/deleteemployee', (req, res) =>{
-    const{ email , 
-    } =req.body; 
-    console.log(email); 
+    const{ email ,
+    } =req.body;
+    console.log(email);
 
-    client.query('DELETE FROM employee_user WHERE email = $1::text',[email]); 
+    client.query('DELETE FROM employee_user WHERE email = $1::text',[email]);
     client.query('DELETE FROM employee WHERE email = $1::text', [email]);
-}); 
+});
 
 // called on user sign up form submit
 app.post('/signinchecked', (req, res) => {
