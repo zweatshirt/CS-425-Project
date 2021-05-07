@@ -1,13 +1,15 @@
-const client = require(./db)
-client.connect()
-
-// buttons here
 let addEmpBtn = document.getElementById('add');
+let deleteEmpBtn = document.getElementById('delete')
+let updateEmpBtn = document.getEelementById('updateemployee')
+let reportBtn = document.getElementById('report')
+let addEmployerBtn = document.getElementById('addeemployer')
+let updateEmployerBtn = document.getElementById('updateEmployerBtn')
+let createW2Button = document.getElementById('createw2')
 
 
-// divs here
 let addEmpForm = document.getElementById('addemployee');
 addEmpForm.style.display = 'none';
+
 
 
 function addEmployee() {
