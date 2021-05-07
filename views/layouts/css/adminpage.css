@@ -89,7 +89,7 @@ input[type=submit]:active, #w2clear:active, #expensereportclear:active {
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
 }
 
-.form-container{
+.form-container, .delete-container{
   padding: 20px;
   margin: 10px;
   background: linear-gradient(#446469, #4a5e61); 

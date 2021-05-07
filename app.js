@@ -58,17 +58,18 @@ app.post('/addemployee', (req, res) => {
 
     });
 
-
+    res.render('adminpage',{topnav:{logged_in:true}})
     // add taxbracket
 });
 
 app.post('/deleteemployee', (req, res) =>{
-    const{ email ,
+    const{ addemail ,
     } =req.body;
-    console.log(email);
+    console.log(addemail);
 
-    client.query('DELETE FROM employee_user WHERE email = $1::text',[email]);
-    client.query('DELETE FROM employee WHERE email = $1::text', [email]);
+    client.query('DELETE FROM employee_user WHERE user_email = $1::text',[addemail]);
+    client.query('DELETE FROM "Employee" WHERE email_address = $1::text', [addemail]);
+    res.render('adminpage', { topnav: { logged_in: true } })
 });
 
 // called on user sign up form submit
