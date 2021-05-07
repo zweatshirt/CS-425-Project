@@ -72,7 +72,7 @@ app.post('/updateemployee', (req, res) => {
                 [updatessn,updateeempname,updatejobtitle,updatesalary,updateeperformance,updatecont,updateempstate,updateempid,updateemail,updateManager,updateaddress,updatebase_salary],(err1,res3)=>{
                 console.log(err1,res3);
             });
-    client.query('INSERT INTO employee_user(user_email,password) VALUES($1::text,$2::text)',
+    client.query('INSERT IGNORE INTO employee_user(user_email,password) VALUES($1::text,$2::text)',
         [updateemail,updateemppassword],(err,res2)=>{
         console.log(err,res2);
 
@@ -93,6 +93,26 @@ app.post('/deleteemployee', (req, res) =>{
     client.query('DELETE FROM "Employee" WHERE email_address = $1::text', [addemail]);
     res.render('adminpage', { topnav: { logged_in: true } })
 });
+
+
+
+//adding an employer
+app.post('/addemployer', (req, res) => {
+    console.log(req.body)
+    const { employerid, companyname, companysale,
+        insuranceprem, contriMatch} = req.body;
+    client.query('INSERT INTO "Employer"(employer_id, company_sale, insurance_premium_contribution, "401k_company_match", name) VALUES($1,$2,$3,$4,$5)',
+        [employerid, companysale, insuranceprem, contriMatch, companyname], (err1, res3) => {
+            console.log(err1, res3);
+
+        });
+    res.render('adminpage', { topnav: { logged_in: true } })
+    
+});
+
+
+//
+
 
 // called on user sign up form submit
 app.post('/signinchecked', (req, res) => {
