@@ -9,6 +9,8 @@ let createW2Button = document.getElementById('createw2')
 
 let addEmpForm = document.getElementById('addemployee');
 addEmpForm.style.display = 'none';
+let deleteEmpForm = document.getElementById('deleteemployee')
+deleteEmpForm.style.display = 'none'
 
 // on 'Add new employee.' btn click
 function addEmployee() {
@@ -19,15 +21,20 @@ function addEmployee() {
 }
 
 function deleteEmployee() {
-
+  if (deleteEmpForm.style.display === 'none') {
+    deleteEmpForm.style.display = 'block';
+  }
+  else deleteEmpForm.style.display = 'none';
 }
+
+
 
 function updateEmployee() {
 
 }
 
 function expenseReport() {
-    
+
 }
 
 function addEmployerSubmit() {
