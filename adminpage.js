@@ -1,48 +1,33 @@
-const client = require(./db)
-client.connect()
+let addEmpBtn = document.getElementById('add');
+let deleteEmpBtn = document.getElementById('delete')
+let updateEmpBtn = document.getElementById('updateemployee')
+let reportBtn = document.getElementById('report')
+let addEmployerBtn = document.getElementById('addeemployer')
+let updateEmployerBtn = document.getElementById('updateEmployerBtn')
+let createW2Button = document.getElementById('createw2')
 
-const addEmpBtn = document.getElementById('addemployee')
-const delEmpBtn = document.getElementById('deletemployee')
-const updateEmployeeBtn = document.getElementById('updateemployee')
-const updateEmployerBtn = document.getElementById('updateemployer')
-const reportBtn = document.getElementById('report')
-const createW2Btn = document.getElementById('createw2')
-const addEmployerForm = document.getElementById('addemployer-1')
-const addEmployeeForm = document.getElementById('addemployee')
-const updateEmployerForm = document.getElementById('updateemployer-1')
-const updateEmployeeForm = document.getElementById('updateemployee-1')
-const createW2Form = document.getElementById('createw2-1')
-const createW2InfoDiv = document.getElementById('createw2-2')
-const expenseReportForm = document.getElementById('expensereport-1')
-const expenseReportDiv = document.getElementById('expensereport-2')
-const updateEmployeeForm = document.getElementById('updateemployee-1')
-const deleteEmployeeForm = document.getElementById('deleteemployee')
 
-addEmpBtn.onclick = function() {
-    addEmployeeForm.style.visibility = 'visible';
+let addEmpForm = document.getElementById('addemployee');
+addEmpForm.style.display = 'none';
+
+// on 'Add new employee.' btn click
+function addEmployee() {
+  if (addEmpForm.style.display === 'none') {
+    addEmpForm.style.display = 'block';
+  }
+  else addEmpForm.style.display = 'none';
 }
 
-delEmpBtn.onclick = function() {
-    deleteEmployeeForm.style.visibility = 'visible';
+function deleteEmployee() {
+
 }
 
-updateEmpBtn.onclick = function() {
-    updateEmployeeForm.style.visibility = 'visible';
+function updateEmployee() {
+
 }
 
-reportBtn.onclick = function() {
-    expenseReportForm.style.visibility = 'visible';
-}
-
-addEmpBtn.onclick = function() {
-    addEmployerForm.style.visibility = 'visible';
-}
-
-updateEmpBtn.onclick = function() {
-    updateEmployerForm.style.visibility = 'visible';
-}
-createW2Btn.onclick = function() {
-    createW2Form.style.visibility = 'visible';
+function expenseReport() {
+    
 }
 
 function addEmployerSubmit() {
