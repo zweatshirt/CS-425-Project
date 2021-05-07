@@ -1,48 +1,19 @@
 const client = require(./db)
 client.connect()
 
-const addEmpBtn = document.getElementById('add')
-const delEmpBtn = document.getElementById('delete')
-const updateEmployeeBtn = document.getElementById('updateemployee')
-const updateEmployerBtn = document.getElementById('updateemployer')
-const reportBtn = document.getElementById('report')
-const createW2Btn = document.getElementById('createw2')
-const addEmployerForm = document.getElementById('addemployer-1')
-const addEmployeeForm = document.getElementById('addemployee')
-const updateEmployerForm = document.getElementById('updateemployer-1')
-const updateEmployeeForm = document.getElementById('updateemployee-1')
-const createW2Form = document.getElementById('createw2-1')
-const createW2InfoDiv = document.getElementById('createw2-2')
-const expenseReportForm = document.getElementById('expensereport-1')
-const expenseReportDiv = document.getElementById('expensereport-2')
-const updateEmployeeForm = document.getElementById('updateemployee-1')
-const deleteEmployeeForm = document.getElementById('deleteemployee')
+// buttons here
+let addEmpBtn = document.getElementById('add');
 
-addEmpBtn.onclick = function() {
-    addEmployeeForm.style.visibility = 'visible';
-}
 
-delEmpBtn.onclick = function() {
-    deleteEmployeeForm.style.visibility = 'visible';
-}
+// divs here
+let addEmpForm = document.getElementById('addemployee');
+addEmpForm.style.display = 'none';
 
-updateEmpBtn.onclick = function() {
-    updateEmployeeForm.style.visibility = 'visible';
-}
 
-reportBtn.onclick = function() {
-    expenseReportForm.style.visibility = 'visible';
-}
-
-addEmpBtn.onclick = function() {
-    addEmployerForm.style.visibility = 'visible';
-}
-
-updateEmpBtn.onclick = function() {
-    updateEmployerForm.style.visibility = 'visible';
-}
-createW2Btn.onclick = function() {
-    createW2Form.style.visibility = 'visible';
+function addEmployee() {
+  if (addEmpForm.style.display === 'none') {
+    document.getElementById('addemployee').style.display = 'block';
+  }
 }
 
 function addEmployerSubmit() {
