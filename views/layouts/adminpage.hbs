@@ -141,12 +141,12 @@
                 </select>
             <h3>Enter the employee's performance:</h3>
             <select name="performance">
-                <option value="amazing">Amazing</option>
+                <option value="super-performer">Super-performer</option>
                 <option value="good">Good</option>
                 <option value="ok">Ok</option>
                 <option value="bad">Bad</option>
             </select>
-            <p><input type="text" name="401k"
+            <p><input type="text" name="cont"
                 placeholder="401k Contribution">
             </p>
             <p><input type="text" name="empstate"
@@ -158,9 +158,10 @@
             <p><input type="text" name="base_salary"
                 placeholder="Base Salary">
             </p>
+            <h3>manager?</h3>
             <select name="Manager">
-                <option value="yes">Amazing</option>
-                <option value="no">Good</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
             <p><input type="text" name="address"
                 placeholder="Residential address">
@@ -169,14 +170,13 @@
         </form>
     </div>
 
-<<<<<<< HEAD
     <div id="deleteemployee" class="deleteemployee">
         <h1>Delete Employee:</h1>
         <form class="delete-container">
-=======
+
     <div hidden id="deleteemployee" class="deleteemployee">
         <form class="delete-container" method="POST" action="/deleteemployee">
->>>>>>> 9f427f1e3fae1a007e475e92a8e1ba686e25f379
+
             <p><input type="text" name="addemail"
                 placeholder="Employee E-mail to Delete">
             </p>
@@ -221,7 +221,7 @@
         </form>
     </div>
 
-    
+
 
 
 
