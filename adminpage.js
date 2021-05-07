@@ -10,12 +10,24 @@ let createW2Button = document.getElementById('createw2')
 let addEmpForm = document.getElementById('addemployee');
 addEmpForm.style.display = 'none';
 
-
-
+// on 'Add new employee.' btn click
 function addEmployee() {
   if (addEmpForm.style.display === 'none') {
-    document.getElementById('addemployee').style.display = 'block';
+    addEmpForm.style.display = 'block';
   }
+  else addEmpForm.style.display = 'none';
+}
+
+function deleteEmployee() {
+
+}
+
+function updateEmployee() {
+
+}
+
+function expenseReport() {
+    
 }
 
 function addEmployerSubmit() {
