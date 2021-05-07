@@ -1,3 +1,6 @@
+const client = require('./db')
+client.connect()
+
 let addEmpBtn = document.getElementById('add');
 let deleteEmpBtn = document.getElementById('delete')
 let updateEmpBtn = document.getElementById('updateemployee')
@@ -16,6 +19,7 @@ deleteEmpForm.style.display = 'none'
 function addEmployee() {
   if (addEmpForm.style.display === 'none') {
     addEmpForm.style.display = 'block';
+
   }
   else addEmpForm.style.display = 'none';
 }
