@@ -38,8 +38,25 @@ app.get('/adminsignin',(req,res) => {
 
 app.get('/signin', (req, res) => {
     res.render('signin'),{topnav: { logged_in: logged_in }}
-    
+
 })
+
+app.post('/addemployee', (req, res) => {
+    const { email, password, ssn,
+            first, last, title,
+            state, cont } = req.body;
+    console.log(email)
+
+    client.query('INSERT INTO employee_user(user_email,password) VALUES(user_email=$1::text and password=$2::text)',
+        [email,password],(err,res2)=>{
+        console.log(err,res2);
+    });
+    client.query('INSERT INTO employee(ssn,first,last,title,state,cont)',
+        [ssn,first,last,title,state,cont],(err,res2)=>{
+        console.log(err,res2);
+    });
+});
+
 // called on user sign up form submit
 app.post('/signinchecked', (req, res) => {
     const { email, password } = req.body;

@@ -110,7 +110,7 @@
     </div>
 
     <div hidden id="addemployee" class="container">
-        <form class="form-container">
+        <form class="form-container" onsubmit="addEmployeeSubmit()">
             <p><input type="text" name="addemail"
                 placeholder="Employee E-mail">
             </p>
@@ -120,11 +120,8 @@
             <p><input type="text" name="addssn"
                 placeholder="Employee SSN">
             </p>
-            <p><input type="text" name="addempfirstname"
-                placeholder="Employee First Name">
-            </p>
-            <p><input type="text" name="addempsecondname"
-                placeholder="Employee Second Name">
+            <p><input type="text" name="addempname"
+                placeholder="Employee Name">
             </p>
             <p><input type="text" name="addjobtitle"
                 placeholder="Job Title">
@@ -161,11 +158,8 @@
 
     <div hidden id="updateemployee-1" class="container">
         <form class="form-container">
-            <p><input type="text" name="updateempfirstname"
-                placeholder="Employee First Name">
-            </p>
-            <p><input type="text" name="updateempsecondname"
-                placeholder="Employee Second Name">
+            <p><input type="text" name="updateempname"
+                placeholder="Employee Name">
             </p>
             <p><input type="Job Title" name="jobtitle"
                 placeholder="Job Title"

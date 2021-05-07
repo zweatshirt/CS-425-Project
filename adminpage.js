@@ -1,3 +1,4 @@
+var app = express()
 const client = require('./db')
 client.connect()
 
@@ -19,7 +20,6 @@ deleteEmpForm.style.display = 'none'
 function addEmployee() {
   if (addEmpForm.style.display === 'none') {
     addEmpForm.style.display = 'block';
-
   }
   else addEmpForm.style.display = 'none';
 }
@@ -31,6 +31,9 @@ function deleteEmployee() {
   else deleteEmpForm.style.display = 'none';
 }
 
+function addEmployeeSubmit() {
+
+}
 
 
 function updateEmployee() {
