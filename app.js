@@ -120,30 +120,25 @@ app.post('/addemployer', (req, res) => {
         });
     res.render('adminpage', { topnav: { logged_in: true } })
 
-});
+}
+);
+
+//adding a dependent on employeepage once logged in. 
+    app.post('/addDependent', (req, res) =>{
+        console.log(req.body)
+        const { employeeSSN, dependentname, dependentSSN, dependentrelation} = req.body;
+
+        client.query('INSERT INTO "Dependent"(ssn, dependent_ssn, name, relation ) VALUES($1, $2, $3, $4)', [employeeSSN, dependentSSN, dependentname, dependentrelation], (err1, res3) =>{
+            console.log(err1, res3); 
+        });
+
+        res.render('employeepage', {
+            topnav: { logged_in: true }
+        });
+
+    }); 
 
 
-//
-
-
-// called on user sign up form submit
-app.post('/signinchecked', (req, res) => {
-    const { email, password } = req.body;
-    console.log(email)
-    client.query('SELECT 1 FROM employee_user where user_email=$1::text and password=$2::text',[email,password],(err,res2)=>{
-        console.log(err,res);
-        if (res2.rowCount === 1) {
-            res.render('employeepage', {
-                topnav: { logged_in: true }
-            });
-        }
-    });
-    res.render('employeepage',{
-        topnav: {
-            logged_in: logged_in
-        }
-    });
-});
 
 //tried to get the about page working, didn't happen
 app.get('/about', function (req, res) {
@@ -170,6 +165,32 @@ app.post('/admincheck',(req,res)=>{
     });
 
 });
+
+// called on user sign in form submit
+app.post('/signinchecked', (req, res) => {
+    const { email, password } = req.body;
+    console.log(email)
+    client.query('SELECT 1 FROM employee_user where user_email=$1::text and password=$2::text', [email, password], (err, res2) => {
+        console.log(err, res);
+        if (res2.rowCount === 1) {
+            res.render('employeepage', {
+                topnav: { logged_in: true }
+            });
+        }else{
+            res.render('signin', {
+                topnav: {
+                    logged_in: false
+                }
+            });
+        }
+    });
+
+});
+
+
+
+
+
 // for hashing passwords
 const getHashedPassword = (password) => {
     const sha256 = crypto.createHash('sha256');
@@ -228,7 +249,7 @@ app.post('/signup', (req, res) => {
             message: 'Registration Complete. Please login to continue.',
             messageClass: 'alert-success'
         });
-    }// else {
+    //}// else {
     //     res.render('signup', {
     //         message: 'Password does not match.',
     //         messageClass: 'alert-danger'
