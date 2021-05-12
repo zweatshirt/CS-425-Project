@@ -72,22 +72,47 @@
         </div>
 
         <span>
-            <h3>
-                View PayCheck:
-            </h3>
+            <button action='/viewpaycheck' method="POST">View PayCheck</button>
         </span>
 
         <div id="viewPayCheck-2" class="p-container">
-            <form class="form-container" onsubmit="addDependentSubmit()">
-                <h4>Paycheck Information:</h4>
-                <p id="PaycheckSSN"></p>
-                <p id="Total Income"></p>
-                <p id="Income Tax"></p>
-                <p id="Net"></p>
-                <p id="employerinsurancecontribution"></p>
-                <button id="clearInformation">Clear Information</button>
-            </form>
+            <h4>Paycheck Information:</h4>
+            <p id="Paycheck SSN"></p>
+            <p id="Total Income"></p>
+            <p id="Income Tax"></p>
+            <p id="Net"></p>
+            <p id="employerinsurancecontribution"></p>
+            <button onclick="deletePaycheck()" id="clearInformation">Clear Information</button>
         </div>
+
+        <!-- <div id="viewPayCheck-2" class="p-container">
+            <table border="1">
+            <tr>
+                <th>SSN</th>
+                <th>Total Income</th>
+                <th>Income Tax</th>
+            </tr>
+
+            <%
+            if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                    %>
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.fullName %></td>
+                    <td><%=data.emailAddress %></td>
+                    <td><%=data.city %></td>
+                    <td><%=data.country %></td>
+                </tr>
+                <%  i++; }) %>
+                <% } else{ %>
+                <tr>
+                    <td colspan="7">No Data Found</td>
+                </tr>
+            <% } %>
+            </table>
+    </div> -->
 
         <div id="perfomaceReview" class="container">
             <span>

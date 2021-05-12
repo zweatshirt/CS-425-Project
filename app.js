@@ -25,6 +25,8 @@ app.engine('hbs', exphbs({
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views/layouts/'));
 
+// app.use('/paycheck', paycheck);
+
 app.get('/', function (req, res) {
     res.render('home',{
         topnav: {
@@ -123,20 +125,20 @@ app.post('/addemployer', (req, res) => {
 }
 );
 
-//adding a dependent on employeepage once logged in. 
+//adding a dependent on employeepage once logged in.
     app.post('/addDependent', (req, res) =>{
         console.log(req.body)
         const { employeeSSN, dependentname, dependentSSN, dependentrelation} = req.body;
 
         client.query('INSERT INTO "Dependent"(ssn, dependent_ssn, name, relation ) VALUES($1, $2, $3, $4)', [employeeSSN, dependentSSN, dependentname, dependentrelation], (err1, res3) =>{
-            console.log(err1, res3); 
+            console.log(err1, res3);
         });
 
         res.render('employeepage', {
             topnav: { logged_in: true }
         });
 
-    }); 
+    });
 
 
 
